@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="container">
+    <div class="page-header">
+        <h1>Detail</h1>
+    <div class="page-header">
+    <h3>{{ university.name }}</h3>
+    <small>{{ university.instructors }} <span class="badge">{{ university.courses }}</span></small>
+    </div>
+{% endblock %}

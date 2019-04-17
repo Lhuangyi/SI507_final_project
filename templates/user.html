@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="page-header">
+    <h3>{{ user.name }}</h3>
+      <small>{{ user.courses }} <span class="badge">{{ user.comments }}</span></small>
+    </div>
+{% endblock %}

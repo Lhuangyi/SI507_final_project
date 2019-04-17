@@ -1,0 +1,22 @@
+.hide {
+        display: none;
+    }
+
+    .head {
+
+        background-color: #2aabd2;
+        padding: 15px;
+        color: white;
+    }
+
+    .menu {
+        margin: 0 -20px;
+        border-bottom: 2px solid #336699;
+        background-color: #cccccc;
+    }
+
+    .menu .nav-sidebar > li > a {
+        padding-right: 40px;
+        padding-left: 40px;
+
+    }
