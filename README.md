@@ -9,41 +9,44 @@ HuangyiLi
 ## Project Description
 
 In my project, I have done the following things:
-- Write code to scrape data in coursera(https://www.coursera.org/about/partners/us). I scraped 55 universities collecting university name, courses list and instructors list.
-- Write code to integrate data scraped with a Flask application
+- Write code to scrape data in coursera(https://www.coursera.org/about/partners/us). I scraped about 180 universities to collect university information including university name, courses list and instructors list.
+- Store scraped data in a json file and then define an up_load_data function to write data into database.
+- Write code to integrate scraped data with a Flask application
 - Integrate models with the Flask framework to build a Flask app
 - Write code to show the data and design front-end web page
-
-## What I have done:
-  - Write code to scrape data
-  - Integrate models with the Flask framework to build a Flask app
-  - Write code to show the data and design front-end web page
-
-## What I have not done:
-  - Write code to integrate scraped data with a Flask application
-  
 
 ## How to run
 
 1. First, you should install all requirements with `pip install -r requirements.txt`)
-2. Second, you should run `python runserve.py runserver `
-
+3. Second, you should run `python SI507project_tools.py` to scrape data form website. 
+    (Since the website is keep updating, there may be some urls which are able to scraped. I will try my best to keep tracking those changes! If you run the code and find that there is a error writen "NoneTpye", please instert the following lines to line 110:
+    `elif url == "bad_url":`
+    `continue`
+    bad_url is the url showed in the bash console that can't be scraped.
+    
+3. Third, when finished Scraping data, you should run `python SI507project_tests.py ` to test.
+4. Then, you should run `python SI507project_app.py runserver` and copy the address: (http://127.0.0.1:5000/)
+ 
 ## How to use
 
-1. In flask app users can register and login to create new courses.
+1. In this flask app users can show scraped in a web page.
 2. Users can also check and delete exited courses,universities and instructors.
 3. Screenshot:
-    homepage: ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/index.png)
-    login page:![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/login.png)
-    register page: ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/register.png)
-    create page: ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/create.png)
+    homepage: Users can click the button:"home" in navigation bar to access homepage
+    ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/E1C6A408804C892BC00586894047C402.png)
+    
+    add page: Users can click the button:"Add University" in navigation bar to access create page
+    ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/3F3F0FE5C4FCE2D49A12D81F6D3313D9.png)
+    detail page: Users can click the name of unversity to enter detail page and click "delete" to remove corresponding items.
+    ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/864B9EC8C14D29A431FFE504E082CAE6.png)
+4. I am still working on login function, I will keep updating this project and acquiring flask knowledge.
 
 ## Routes in this application
-- `/index` -> this is the home page
-- `/login` -> this route has a form for user input to login
-- `/register` -> this route has a form for user input to register
-- `/logout` -> this route has a form for user input to logout
-- `/create` -> this route has a form for user input to create a new course
+- `/` -> this is the home page
+- `/login` -> this route has a form for user input to login( still work on it)
+- `/add'->` this route has a form for user input to create a new university
+- `/university?id=<university_id>` -> this route to enter spectific university detail page
+- `/delete_university/<university_id>` -> this route can delete a specific university
 - `/delete_instructor/<instructor_id>` -> this route can delete a specific instructor
 - `/delete_universiy/<university_id>` -> this route can delete a specific university
 
@@ -61,16 +64,17 @@ You should run `python SI507project_tests.py `to test SI507project_tools.py
   -style.css
 - [templates]
   -add.html
+  -addcourse.html
+  -addinstructor.html
   -base.html
   -detail.html
   -index.html
   -login.html
-  -register.html
-  -user.html
+  -success.html
 -SI507project_tools.py
 -SI507project_tests.py
+-SI507project_app.py
 -database.pdf
--runserver.py
 -requirements.txt
 
 ---
@@ -101,19 +105,19 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 
 ### Additional Components (at least 6 required)
 - [x] Use of a new module
-- [x] Use of a second new module
-- [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
+- [ ] Use of a second new module
+- [x] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [x] A many-to-many relationship in your database structure
 - [x] At least one form in your Flask application
 - [x] Templating in your Flask application
-- [x] Inclusion of JavaScript files in the application
-- [ ] Links in the views of Flask application page/s
+- [ ] Inclusion of JavaScript files in the application
+- [x] Links in the views of Flask application page/s
 - [ ] Relevant use of `itertools` and/or `collections`
 - [x] Sourcing of data using web scraping
-- [ ] Sourcing of data using web REST API requests
+- [x] Sourcing of data using web REST API requests
 - [x] Sourcing of data using user input and/or a downloaded .csv or .json dataset
 - [x] Caching of data you continually retrieve from the internet in some way
 
 ### Submission
-- [ ] I included a link to my GitHub repository with the correct permissions on Canvas! (Did you though? Did you actually? Are you sure you didn't forget?)
-- [ ] I included a summary of my project and how I thought it went **in my Canvas submission**!
+- [x] I included a link to my GitHub repository with the correct permissions on Canvas! (Did you though? Did you actually? Are you sure you didn't forget?)
+- [x] I included a summary of my project and how I thought it went **in my Canvas submission**!
