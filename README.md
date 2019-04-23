@@ -59,9 +59,9 @@ You should run `python SI507project_tests.py `to test SI507project_tools.py
 - [database]
   - database.001.jpeg
 - [static]
-  -[img]
-    -logo.jpg
-  -style.css
+  - [img]
+    - logo.jpg
+  - style.css
 - [templates]
   - add.html
   - addcourse.html
