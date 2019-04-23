@@ -63,19 +63,19 @@ You should run `python SI507project_tests.py `to test SI507project_tools.py
     -logo.jpg
   -style.css
 - [templates]
-  -add.html
-  -addcourse.html
-  -addinstructor.html
-  -base.html
-  -detail.html
-  -index.html
-  -login.html
-  -success.html
--SI507project_tools.py
--SI507project_tests.py
--SI507project_app.py
--database.pdf
--requirements.txt
+  - add.html
+  - addcourse.html
+  - addinstructor.html
+  - base.html
+  - detail.html
+  - index.html
+  - login.html
+  - success.html
+- SI507project_tools.py
+- SI507project_tests.py
+- SI507project_app.py
+- database.pdf
+- requirements.txt
 
 ---
 ## Code Requirements for Grading
