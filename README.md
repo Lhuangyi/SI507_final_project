@@ -30,9 +30,13 @@ In my project, I have done the following things:
 
 ## How to use
 
-1. A useful instruction goes here
-2. A useful second step here
-3. (Optional): Markdown syntax to include an screenshot/image: ![alt text](image.jpg)
+1. In flask app users can register and login to create new courses.
+2. Users can also check and delete exited courses,universities and instructors.
+3. Screenshot:
+    homepage: ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/index.png)
+    login page:![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/login.png)
+    register page: ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/register.png)
+    create page: ![alt text](https://github.com/Lhuangyi/SI507_final_project/blob/master/img/create.png)
 
 ## Routes in this application
 - `/index` -> this is the home page
@@ -48,6 +52,7 @@ You should run `python SI507project_tests.py `to test SI507project_tools.py
 
 
 ## In this repository:
+- [img]
 - [database]
   - database.001.jpeg
 - [static]
