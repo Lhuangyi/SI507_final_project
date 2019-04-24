@@ -11,15 +11,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/index">Flask Application</a>
+            <a class="navbar-brand" href="/">Flask Application</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/index">Home</a></li>
-                <li><a href="/create">Add</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/add">Add University</a> </li>
                 <li><a href="/login">Login</a></li>
-
             </ul>
         </div>
     </div>
@@ -32,25 +30,11 @@
         <h1>Find what you want!</h1>
 <ul>
     {% for university in universities %}
-        <li>{{ university.name }}</li>
-        <ul>
-            {% for course in university.courses %}
-            <li>Course: {{ course.title }}
-            {% else %}
-                <li>No course, please add a course</li>
-            {% endfor %}
-        </ul>
-        <ul>
-            {% for instructor in university.instructors %}
-            <li>Instructor: {{ instructor.name }}
-            {% else %}
-                <li>No instructor, please add an instructor</li>
-            {% endfor %}
-        </ul>
+        <li><h4><a href="{{ url_for("university",id=university.id)}}">{{ university.name }}</a></h4>
+       |  <a href="{{ url_for('delete_university', university_id= university.id)}}">Delete</a></li>
+
+
     {% endfor %}
 </ul>
 
 {% endblock %}
-
-
-
