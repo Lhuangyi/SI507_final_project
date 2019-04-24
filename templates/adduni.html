@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'index.html'%}
+{% block content %}
+    <div class="container">
+    <div class="page-header">
+        <h1>Add University</h1>
 
-</body>
-</html>
+<form method="POST">
+
+    {{ form.csrf_token }}
+    {{ form.name.label }}{{ form.name }}<br>
+    {{ form.instructors.label }}{{ form.instructors }}<br>
+    {{ form.courses.label }}{{ form.courses }}
+    {{ form.submit }}
+    <li>If the university is exited, the course and instructor will be add to the exited university.</li>
+     {#  显示消息闪现的内容  #}
+    {% for message in get_flashed_messages() %}
+        {{ message }}<br>
+    {% endfor %}
+
+</form>
+    </div>
+    </div>
+{% endblock %}
