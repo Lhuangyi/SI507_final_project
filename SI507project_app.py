@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 from flask import Flask
 import json
 from flask import render_template, request, redirect, flash, url_for
