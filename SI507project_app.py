@@ -189,7 +189,7 @@ def add():
             # 6.验证不通过则提示错误
             if request.method == 'POST':
                 flash('参数错误')
-        return redirect('/index')
+        return redirect('/')
     else:
         uni_form = AddUniForm()
         universities = University.query.all()
