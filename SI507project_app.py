@@ -213,7 +213,7 @@ def delete_university(university_id):
     else:
         flash('Cannot find the university')
 
-    return redirect('/index')
+    return redirect('/')
 
 
 @app.route('/delete_course/<course_id>')
@@ -267,13 +267,6 @@ def login():
         else:
             print(form.errors)
         return render_template('login.html', form=form)
-
-
-@app.route('/logout')
-def logout():
-    session.pop('logged_in', None)
-    flash('You were logged out')
-    return redirect(url_for('index'))
 
 
 class LoginForm(Form):
