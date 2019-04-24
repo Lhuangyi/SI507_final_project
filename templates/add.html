@@ -2,7 +2,7 @@
 {% block content %}
     <div class="container">
     <div class="page-header">
-        <h1>Add</h1>
+        <h1>Add Course</h1>
 
 <form method="POST">
 
@@ -18,24 +18,6 @@
     {% endfor %}
 
 </form>
-
-<ul>
-    {% for university in universities %}
-        <li>{{ university.name }}</li>
-        <ul>
-            {% for course in university.courses %}
-            <li>Course: {{ course.title }}</li><a href="{{ url_for('delete_course',course_id=course.id) }}">Delete</a></li>
-            {% else %}
-                <li>No course, please add a course</li>
-            {% endfor %}
-        </ul>
-        <ul>
-            {% for instructor in university.instructors %}
-            <li>Instructor: {{ instructor.name }}</li><a href="{{ url_for('delete_instructor',instructor_id=instructor.id) }}">Delete</a></li>
-            {% else %}
-                <li>No instructor, please add an instructor</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
-</ul>
+    </div>
+    </div>
 {% endblock %}
