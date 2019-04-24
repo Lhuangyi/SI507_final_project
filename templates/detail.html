@@ -2,9 +2,18 @@
 {% block content %}
     <div class="container">
     <div class="page-header">
-        <h1>Detail</h1>
+        <h1>University Detail</h1>
     <div class="page-header">
     <h3>{{ university.name }}</h3>
-    <small>{{ university.instructors }} <span class="badge">{{ university.courses }}</span></small>
+        <h4>Course List</h4>
+        {% for c in university.courses %}
+            <li>{{ c.title }} | <a href="{{ url_for('delete_course',course_id=c.id) }}">Delete</a></li>
+        {% endfor %}
+        <h4>Instructor List</h4>
+        {% for i in university.instructors %}
+            <li>{{i.name }} | <a href="{{ url_for('delete_instructor',instructor_id=i.id) }}">Delete</a></li>
+        {% endfor %}
+    </div>
+    </div>
     </div>
 {% endblock %}
