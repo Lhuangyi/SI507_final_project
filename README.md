@@ -1,4 +1,4 @@
-# Course Mangement Platform
+# University Online Resource Mangement System
 
 HuangyiLi
 
