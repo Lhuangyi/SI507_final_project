@@ -229,7 +229,7 @@ def delete_course(course_id):
             db.session.rollback()
     else:
         flash("Can't find this course")
-    return render_template('success.html')
+    return redirect('/')
 
 
 @app.route('/delete_instructor/<instructor_id>')
@@ -247,8 +247,7 @@ def delete_instructor(instructor_id):
             db.session.rollback()
     else:
         flash('Canot find the instructor')
-
-    return render_template('success.html')
+    return redirect('/')
 
 
 @app.route('/login', methods=['GET', 'POST'])
