@@ -1,4 +1,4 @@
-# SI507_final_project
+# Course Mangement Platform
 
 HuangyiLi
 
