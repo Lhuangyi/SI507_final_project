@@ -44,7 +44,7 @@ In my project, I have done the following things:
 ## Routes in this application
 - `/` -> this is the home page
 - `/login` -> this route has a form for user input to login( still work on it)
-- `/add'->` this route has a form for user input to create a new university
+- `/add->` this route has a form for user input to create a new university
 - `/university?id=<university_id>` -> this route to enter spectific university detail page
 - `/delete_university/<university_id>` -> this route can delete a specific university
 - `/delete_instructor/<instructor_id>` -> this route can delete a specific instructor
