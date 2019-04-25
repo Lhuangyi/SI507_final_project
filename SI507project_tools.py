@@ -112,19 +112,21 @@ class Spider:
             print(cont, url)
             soup = BeautifulSoup(page, features="html.parser")
             university_name = soup.find('h1', class_='display-4-text')
-            university_name = university_name.get_text()
+            if university_name == None:
+                continue
+            else:
+                university_name = university_name.get_text()
+                course_node = soup.find('div',{'class':'bt3-col-md-12'})
+                all_courses = course_node.find_all('div',{'class':'name headline-1-text'})
+                for c in all_courses:
+                    course_name = c.get_text()
+                    courses.append(course_name)
 
-            course_node = soup.find('div',{'class':'bt3-col-md-12'})
-            all_courses = course_node.find_all('div',{'class':'name headline-1-text'})
-            for c in all_courses:
-                course_name = c.get_text()
-                courses.append(course_name)
-
-            all_instructors = soup.find_all('h4', {'class': 'instructorName headline-1-text'})
-            for i in all_instructors:
-                name = i.get_text()
-                instructors.append(name)
-            data[university_name]={'courses': courses, 'instructors':instructors}
+                all_instructors = soup.find_all('h4', {'class': 'instructorName headline-1-text'})
+                for i in all_instructors:
+                    name = i.get_text()
+                    instructors.append(name)
+                data[university_name]={'courses': courses, 'instructors':instructors}
 
 
 with open("courses.json", "w", encoding='utf8', newline='') as fp:
