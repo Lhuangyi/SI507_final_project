@@ -1,4 +1,4 @@
-# University Online Resource Mangement System
+# University Online Resource Mangement
 
 HuangyiLi
 
