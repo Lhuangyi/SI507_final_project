@@ -16,7 +16,7 @@ get==2019.3.22
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10.1
-Mako==1.0.9
+Mako==1.2.2
 MarkupSafe==1.1.1
 numpy==1.16.2
 pager==3.3
